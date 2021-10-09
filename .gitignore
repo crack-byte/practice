@@ -1,3 +1,5 @@
 /.idea/
 /practice.iml
 /target/**
+/target/test-classes/
+/target/classes/
