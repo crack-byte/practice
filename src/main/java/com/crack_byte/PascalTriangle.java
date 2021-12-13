@@ -19,7 +19,6 @@ public class PascalTriangle {
 
     public static void main(String[] args) {
         List<List<Integer>> generate = generate(4);
-        generate = generate;
     }
 
     public static List<List<Integer>> generate(int numRows) {

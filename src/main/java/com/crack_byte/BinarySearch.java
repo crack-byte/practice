@@ -14,7 +14,6 @@ public class BinarySearch {
             } else {
                 pos2 = half - 1;
             }
-             //agsdiugaskdgasgd
             if (pos1 > pos2)
                 return -1;
         }
