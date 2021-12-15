@@ -6,10 +6,8 @@ public class FirstUniqueCharacterInString {
         int c = 97;
         while (c <= 122) {
             int i = s.indexOf(c);
-            if (i >= 0 && i == s.lastIndexOf(c)) {
-                if (i < index) {
-                    index = i;
-                }
+            if (i >= 0 && i == s.lastIndexOf(c) && i < index) {
+                index = i;
             }
             ++c;
         }
