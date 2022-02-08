@@ -2,7 +2,7 @@ package com.crack_byte;
 
 public class Search2DMatrix {
     public static void main(String[] args) {
-        int nums[][] = {{1}};
+        int[][] nums = {{1}};
         System.out.println(searchMatrix(nums, 1));
     }
 
