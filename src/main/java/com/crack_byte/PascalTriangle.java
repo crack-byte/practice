@@ -11,12 +11,6 @@ public class PascalTriangle {
         map.put(2, Arrays.asList(1, 2, 3));
     }
 
-    static {
-        map.put(0, Arrays.asList(1));
-        map.put(1, Arrays.asList(1, 1));
-        map.put(2, Arrays.asList(1, 2, 1));
-    }
-
     public static void main(String[] args) {
         List<List<Integer>> generate = generate(4);
     }

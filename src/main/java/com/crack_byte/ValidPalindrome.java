@@ -4,7 +4,6 @@ public class ValidPalindrome {
 
     public static void main(String[] args) {
         boolean palindrome = isPalindrome(".,");
-        palindrome = palindrome;
     }
 
     public static boolean isPalindrome(String s) {

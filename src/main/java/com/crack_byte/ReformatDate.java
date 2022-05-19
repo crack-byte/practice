@@ -23,7 +23,6 @@ public class ReformatDate {
 
     public static void main(String[] args) {
         String s = reformatDate("2th Oct 2052");
-        s=s;
     }
 
     public static String reformatDate(String date) {
