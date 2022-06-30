@@ -1,6 +1,7 @@
 package com.crack_byte;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class RotateArray {
 
@@ -52,23 +53,41 @@ public class RotateArray {
         }
     }
 
+    //    public static void main(String[] args) {
+//        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3,
+//                4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8,
+//                9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        System.out.println("before : " + Arrays.toString(arr));
+//        long l = System.nanoTime();
+//        rotate(arr, 3);
+//        System.out.println("nano time :" + (System.nanoTime() - l));
+//        System.out.println("before : " + Arrays.toString(arr));
+//        arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2,
+//                3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7,
+//                8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        System.out.println("before : " + Arrays.toString(arr));
+//        l = System.nanoTime();
+//        rotate1(arr, 3);
+//        System.out.println("nano time :" + (System.nanoTime() - l));
+//        System.out.println("before : " + Arrays.toString(arr));
+//    }
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3,
-                4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8,
-                9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println("before : " + Arrays.toString(arr));
-        long l = System.nanoTime();
-        rotate(arr, 3);
-        System.out.println("nano time :" + (System.nanoTime() - l));
-        System.out.println("before : " + Arrays.toString(arr));
-        arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2,
-                3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7,
-                8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println("before : " + Arrays.toString(arr));
-        l = System.nanoTime();
-        rotate1(arr, 3);
-        System.out.println("nano time :" + (System.nanoTime() - l));
-        System.out.println("before : " + Arrays.toString(arr));
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(), i = 0;
+        int[] nums = new int[n];
+        while (i < n) {
+            nums[i++] = sc.nextInt();
+        }
+        int k = sc.nextInt();
+        if (n > 1) {
+            k = k % n;
+            reverse(nums, 0, --n);
+            reverse(nums, 0, k-1);
+            reverse(nums, k, n);
+        }
+        for (i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
     }
 }
 
