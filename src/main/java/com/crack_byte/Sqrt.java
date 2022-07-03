@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Sqrt {
     public static void main(String[] args) {
+        // input : n = 144
         int num = Integer.parseInt(new Scanner(System.in).nextLine().substring(4));
         int i = 1;
         while( i * i <= num){
