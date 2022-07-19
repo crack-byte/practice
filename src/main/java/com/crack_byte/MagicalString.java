@@ -1,7 +1,8 @@
 package com.crack_byte;
 
 public class MagicalString {
-    static final int magicValue=1 ^ 2;
+    static final int magicValue = 1 ^ 2;
+
     public static void main(String[] args) {
         int i = magicalString(8);
     }
@@ -24,7 +25,7 @@ public class MagicalString {
             while (t < series[j]) {
                 series[++i] = num;
                 if (num == 1 && i < n) {
-                    count ++;
+                    count++;
                 }
                 t++;
             }

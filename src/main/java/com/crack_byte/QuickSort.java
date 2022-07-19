@@ -35,7 +35,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4, 3, 32, 5, 3, 2, 5, 56, 67, 4, 3, 5, 35, 23, 43, 55, 665, 76,4,3,32,54,3,32323,123,3123,23,23223,445,45,5767,87,78,65,564,54,43,34,34,3};
+        int[] arr = {4, 3, 32, 5, 3, 2, 5, 56, 67, 4, 3, 5, 35, 23, 43, 55, 665, 76, 4, 3, 32, 54, 3, 32323, 123, 3123, 23, 23223, 445, 45, 5767, 87, 78, 65, 564, 54, 43, 34, 34, 3};
         int len = arr.length;
         System.out.println("Array before sorting: " + Arrays.toString(arr));
         long l = System.nanoTime();

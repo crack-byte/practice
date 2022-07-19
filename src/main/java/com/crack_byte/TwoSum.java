@@ -51,8 +51,8 @@ public class TwoSum {
         }
         return count;
     }
-    static int power(int x, int y)
-    {
+
+    static int power(int x, int y) {
         if (y == 0)
             return 1;
         else if (y % 2 == 0)
@@ -60,6 +60,7 @@ public class TwoSum {
         else
             return x * power(x, y / 2) * power(x, y / 2);
     }
+
     /**
      * two pointer approach faster
      * Note : currently has some issues with it nmeed to fix
@@ -83,18 +84,19 @@ public class TwoSum {
         }
         return new int[]{low, high};
     }
+
     public static ArrayList<Integer> solve(ArrayList<Integer> A, ArrayList<Integer> B) {
         ArrayList<Integer> T = B;
         ArrayList<Integer> T2 = A;
-        if(A.size()>=B.size()){
+        if (A.size() >= B.size()) {
             T = A;
             T2 = B;
         }
-        for(int i = 0 ; i<T.size();++i){
-            int ind = search(T2,T.get(i));
-            if(ind<0){
+        for (int i = 0; i < T.size(); ++i) {
+            int ind = search(T2, T.get(i));
+            if (ind < 0) {
                 T.remove(i);
-            }else{
+            } else {
                 T2.remove(ind);
             }
         }
@@ -102,21 +104,23 @@ public class TwoSum {
         return T;
 
     }
-    public static int search(ArrayList<Integer> list , int target){
-        int i = 0,j=list.size()-1;
-        while(i<=j){
-            if(i<j){
-                if(list.get(i)==target) return i;
+
+    public static int search(ArrayList<Integer> list, int target) {
+        int i = 0, j = list.size() - 1;
+        while (i <= j) {
+            if (i < j) {
+                if (list.get(i) == target) return i;
             }
-            if(list.get(j)==target) return j;
+            if (list.get(j) == target) return j;
             ++i;
             --j;
         }
         return -1;
     }
+
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,1,4,10));
-        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(3,6,2,10,1));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 1, 4, 10));
+        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(3, 6, 2, 10, 1));
 
         ArrayList<Integer> solve = solve(list, list2);
         System.out.println(solve.size());

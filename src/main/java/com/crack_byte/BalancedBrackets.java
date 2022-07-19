@@ -5,13 +5,15 @@ import java.util.Map;
 import java.util.Stack;
 
 public class BalancedBrackets {
-    public static Map<Character,Character> map = new HashMap<>(4);
+    public static Map<Character, Character> map = new HashMap<>(4);
+
     static {
-        map.put('[',']');
-        map.put('(',')');
-        map.put('<','>');
-        map.put('{','}');
+        map.put('[', ']');
+        map.put('(', ')');
+        map.put('<', '>');
+        map.put('{', '}');
     }
+
     public static void main(String[] args) {
         long l = System.currentTimeMillis();
         System.out.println(isBalanced("({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])" +
@@ -28,19 +30,20 @@ public class BalancedBrackets {
                 "({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])" +
                 "({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])({[])" +
                 "({[])({[])"));
-        System.out.println(System.currentTimeMillis()-l);
+        System.out.println(System.currentTimeMillis() - l);
     }
-    public static boolean isBalanced(String str){
+
+    public static boolean isBalanced(String str) {
         Stack<Character> stack = new Stack<>();
-        for (char c : str.toCharArray()){
-            if(stack.empty()){
+        for (char c : str.toCharArray()) {
+            if (stack.empty()) {
                 stack.push(c);
-            }else {
-                if(isOpen(c)){
+            } else {
+                if (isOpen(c)) {
                     stack.push(c);
-                }else {
+                } else {
                     Character character = map.get(stack.peek());
-                    if (character!=null && character.equals(c)) {
+                    if (character != null && character.equals(c)) {
                         stack.pop();
                     } else {
                         stack.push(c);
@@ -50,7 +53,8 @@ public class BalancedBrackets {
         }
         return stack.empty();
     }
-    public static boolean isOpen(char c){
+
+    public static boolean isOpen(char c) {
         return map.containsKey(c);
     }
 }

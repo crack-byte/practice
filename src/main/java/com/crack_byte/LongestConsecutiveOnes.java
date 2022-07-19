@@ -27,10 +27,10 @@ public class LongestConsecutiveOnes {
                     else break;
                 }
                 int t = l + r;
-                if(t < count){
+                if (t < count) {
                     t++;
                 }
-                if(a < t) a = t;
+                if (a < t) a = t;
             }
         }
         return a;

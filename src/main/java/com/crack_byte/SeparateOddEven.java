@@ -43,13 +43,13 @@ public class SeparateOddEven {
                     arr[n + c] = -1;
                     ++c;
                 }
-                if (n > 0 && arr[c+n] !=0 ) {
-                    c = c + n +1;
-                }else {
-                    c=c+n;
+                if (n > 0 && arr[c + n] != 0) {
+                    c = c + n + 1;
+                } else {
+                    c = c + n;
                 }
-            }else {
-                arr[c++]=-1;
+            } else {
+                arr[c++] = -1;
             }
 
             n = 0;
@@ -66,13 +66,13 @@ public class SeparateOddEven {
                     arr[c + n] = -1;
                     ++c;
                 }
-                if (n > 0 && arr[c+n] !=0 ) {
-                    c = c + n +1;
-                }else {
-                    c=c+n;
+                if (n > 0 && arr[c + n] != 0) {
+                    c = c + n + 1;
+                } else {
+                    c = c + n;
                 }
-            }else {
-                arr[c++]=-1;
+            } else {
+                arr[c++] = -1;
             }
 
         }

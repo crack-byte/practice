@@ -2,7 +2,7 @@ package com.crack_byte;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
-        ListNode root = Utils.createLinkedList(1,2,3,4,5);
+        ListNode root = Utils.createLinkedList(1, 2, 3, 4, 5);
         reverseList(root);
     }
 

@@ -3,7 +3,7 @@ package com.crack_byte;
 public class RangeSumQuery {
     public static void main(String[] args) {
         int[] a = {7, 3, 1, 5, 5, 5, 1, 2, 4, 5};
-        int[][] b = {{7, 10}, {3, 10}, {3, 5}, {1, 10},{1,1},{10,10}};
+        int[][] b = {{7, 10}, {3, 10}, {3, 5}, {1, 10}, {1, 1}, {10, 10}};
         long[] res = rangeSum(a, b);
         for (long re : res) {
             System.out.println(re);

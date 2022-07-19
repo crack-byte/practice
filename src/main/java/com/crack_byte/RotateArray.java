@@ -1,6 +1,5 @@
 package com.crack_byte;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class RotateArray {
@@ -82,7 +81,7 @@ public class RotateArray {
         if (n > 1) {
             k = k % n;
             reverse(nums, 0, --n);
-            reverse(nums, 0, k-1);
+            reverse(nums, 0, k - 1);
             reverse(nums, k, n);
         }
         for (i = 0; i < nums.length; i++) {

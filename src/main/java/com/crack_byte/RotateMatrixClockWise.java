@@ -10,9 +10,10 @@ public class RotateMatrixClockWise {
             System.out.println(Arrays.toString(a));
         }
     }
+
     public static void solve(int[][] A) {
-        for(int i =0;i<A.length;i++){
-            for(int j=i+1;j<A.length;j++){
+        for (int i = 0; i < A.length; i++) {
+            for (int j = i + 1; j < A.length; j++) {
                 int s = A[i][j];
                 A[i][j] = A[j][i];
                 A[j][i] = s;
@@ -20,9 +21,10 @@ public class RotateMatrixClockWise {
             reverse(A[i]);
         }
     }
-    static void reverse(int[] nums){
-        int i=0,j=nums.length-1;
-        while(i<j){
+
+    static void reverse(int[] nums) {
+        int i = 0, j = nums.length - 1;
+        while (i < j) {
             int s = nums[i];
             nums[i] = nums[j];
             nums[j] = s;

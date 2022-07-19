@@ -20,7 +20,7 @@ public class ValidPalindrome {
                 r = convertChar(s.charAt(--j));
             }
 
-            if ((l != r) || i>j )return false;
+            if ((l != r) || i > j) return false;
             ++i;
             --j;
         }

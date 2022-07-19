@@ -4,16 +4,17 @@ public class ReverseWords {
     public static String reverseWords(String s) {
         return iterate(s.toCharArray());
     }
+
     public static String iterate(char[] chars) {
         int len = chars.length;
         int low = 0;
         int high = 0;
         while (high < len) {
-            if (chars[high] == ' ' || high==len-1) {
-                if(high==len-1){
-                    reverseString2(chars, low, high );
+            if (chars[high] == ' ' || high == len - 1) {
+                if (high == len - 1) {
+                    reverseString2(chars, low, high);
                     break;
-                }else {
+                } else {
                     reverseString2(chars, low, high - 1);
                 }
                 low = high + 1;

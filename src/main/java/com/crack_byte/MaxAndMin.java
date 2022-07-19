@@ -11,13 +11,13 @@ public class MaxAndMin {
             nums[i++] = sc.nextInt();
         }
         --i;
-        int min=Integer.MAX_VALUE,max=Integer.MIN_VALUE,j=0;
-        while(j<=i){
-            max=Math.max(max,Math.max(nums[i],nums[j]));
-            min=Math.min(min,Math.min(nums[i],nums[j]));
+        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE, j = 0;
+        while (j <= i) {
+            max = Math.max(max, Math.max(nums[i], nums[j]));
+            min = Math.min(min, Math.min(nums[i], nums[j]));
             --i;
             ++j;
         }
-        System.out.print(max+ " " + min);
+        System.out.print(max + " " + min);
     }
 }

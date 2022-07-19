@@ -11,12 +11,11 @@ public class SumOfSubArrays {
             int s = 0;
             for (int j = i; j < A.length; j++) {
                 if (j != i) {
-                    sum +=  s + A[j];
+                    sum += s + A[j];
                     s = s + A[j];
-                }
-                else {
+                } else {
                     s = A[j];
-                    sum+=A[j];
+                    sum += A[j];
                 }
             }
         }
@@ -24,9 +23,10 @@ public class SumOfSubArrays {
     }
 
     public static long subarraySum1(int... A) {
-        int sum = 0;int k = A.length;
+        int sum = 0;
+        int k = A.length;
         for (int i = 0; i < k; i++) {
-           sum = sum + (A[i] * (k - i) * (i+1));
+            sum = sum + (A[i] * (k - i) * (i + 1));
         }
         return sum;
     }

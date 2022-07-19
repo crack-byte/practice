@@ -25,7 +25,7 @@ public class PermutationInString {
             char c = s2.charAt(i++);
             if (map.containsKey(c)) {
                 map2.put(c, map2.containsKey(c) ? map2.get(c) + 1 : 1);
-                if(map2.equals(map)) return true;
+                if (map2.equals(map)) return true;
             } else {
                 map2.clear();
             }

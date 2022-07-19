@@ -6,7 +6,7 @@ public class Test {
         do {
             int i1 = b + a;
             int i2 = i1 * i;
-            System.out.println(i+" x" + (i1 / 10 < 1 ? ' ' : "") + i1 + ' ' + "=" + (i2 / 10 < 1 ? ' ' : "") + i2);
+            System.out.println(i + " x" + (i1 / 10 < 1 ? ' ' : "") + i1 + ' ' + "=" + (i2 / 10 < 1 ? ' ' : "") + i2);
             a++;
         }
         while (a <= 10);

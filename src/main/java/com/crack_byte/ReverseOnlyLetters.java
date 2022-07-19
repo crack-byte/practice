@@ -9,10 +9,10 @@ public class ReverseOnlyLetters {
         char[] chars = s.toCharArray();
         int i = 0, j = chars.length - 1;
         while (i < j) {
-            while (i<j && convertChar(chars[i]) == 0) {
+            while (i < j && convertChar(chars[i]) == 0) {
                 ++i;
             }
-            while (i<j && convertChar(chars[j]) == 0) {
+            while (i < j && convertChar(chars[j]) == 0) {
                 --j;
             }
             char c = chars[i];
@@ -25,7 +25,7 @@ public class ReverseOnlyLetters {
     }
 
     private static int convertChar(char c) {
-        if ((c >= 97 && c <= 122) ) {
+        if ((c >= 97 && c <= 122)) {
             return c;
         } else if (c >= 65 && c <= 90) {
             return c;

@@ -27,7 +27,7 @@ public class Prime {
                 int sum = 0, d = n;
                 while (d > 0) {
                     sum += d % 10;
-                    d = d/10;
+                    d = d / 10;
                 }
                 if (sum % 3 == 0) {
                     System.out.println("NO");

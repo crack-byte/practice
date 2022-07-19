@@ -36,7 +36,7 @@ public class ReformatDate {
             } else {
                 if (day == null) {
                     if (s.length() == 3) {
-                        day = '0'+s.substring(0, 1);
+                        day = '0' + s.substring(0, 1);
                     } else {
                         day = s.substring(0, 2);
                     }
@@ -47,6 +47,6 @@ public class ReformatDate {
             }
             i++;
         }
-        return  s+ "-" + mon + "-" + day;
+        return s + "-" + mon + "-" + day;
     }
 }
