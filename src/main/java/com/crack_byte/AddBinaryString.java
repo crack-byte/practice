@@ -31,13 +31,11 @@ public class AddBinaryString {
             } else {
                 if (carry == 0) {
                     s.insert(0, sum);
+                } else if (sum + carry > 1) {
+                    s.insert(0, 0);
                 } else {
-                    if (sum + carry > 1) {
-                        s.insert(0, 0);
-                    } else {
-                        s.insert(0, sum + carry);
-                        carry = 0;
-                    }
+                    s.insert(0, sum + carry);
+                    carry = 0;
                 }
             }
 
